@@ -58,7 +58,7 @@ app.get('/payment-request', async (c) => {
       return c.json({ data: 'Payment Request' }, 200)
 })
 //ssl commerz response
-app.post('after-payment', async(c) =>{
+app.post('/after-payment', async(c) =>{
   const data = await c.req.parseBody()
   const params = await c.req.query();
   console.log(data);
